@@ -3,359 +3,86 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Ajay Singh | Software Engineer</title>
-
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-    scroll-behavior:smooth;
-}
-
-body{
-    background:#0f172a;
-    color:#fff;
-}
-
-header{
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:40px 20px;
-}
-
-.container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
-}
-
-.profile-pic{
-    width:200px;
-    height:200px;
-    border-radius:50%;
-    object-fit:cover;
-    border:5px solid #38bdf8;
-    box-shadow:0 0 25px rgba(56,189,248,.4);
-    margin-bottom:20px;
-}
-
-.hero h1{
-    font-size:3rem;
-    margin-bottom:10px;
-}
-
-.hero h3{
-    color:#38bdf8;
-    margin-bottom:20px;
-    font-weight:500;
-}
-
-.hero p{
-    max-width:800px;
-    margin:auto;
-    color:#cbd5e1;
-    line-height:1.8;
-}
-
-.btn{
-    display:inline-block;
-    margin-top:25px;
-    padding:12px 25px;
-    background:#38bdf8;
-    color:#000;
-    text-decoration:none;
-    border-radius:8px;
-    font-weight:bold;
-}
-
-.social{
-    margin-top:20px;
-}
-
-.social a{
-    color:white;
-    text-decoration:none;
-    margin:0 10px;
-}
-
-section{
-    padding:80px 0;
-}
-
-.section-title{
-    text-align:center;
-    font-size:2rem;
-    margin-bottom:40px;
-    color:#38bdf8;
-}
-
-.card-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-}
-
-.card{
-    background:#1e293b;
-    padding:25px;
-    border-radius:15px;
-}
-
-.card h3{
-    margin-bottom:10px;
-    color:#38bdf8;
-}
-
-.skills{
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
-    justify-content:center;
-}
-
-.skill{
-    background:#1e293b;
-    padding:10px 18px;
-    border-radius:30px;
-}
-
-.contact{
-    text-align:center;
-}
-
-.contact a{
-    color:#38bdf8;
-    text-decoration:none;
-}
-
-footer{
-    text-align:center;
-    padding:20px;
-    background:#020617;
-    color:#94a3b8;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;scroll-behavior:smooth}
+body{background:#0f172a;color:#fff}
+header{min-height:100vh;display:flex;justify-content:center;align-items:center;text-align:center;padding:40px 20px}
+.container{width:90%;max-width:1200px;margin:auto}
+.profile-pic{width:200px;height:200px;border-radius:50%;object-fit:cover;border:5px solid #38bdf8;margin-bottom:20px;animation:glow 2s infinite alternate}
+@keyframes glow{from{box-shadow:0 0 15px rgba(56,189,248,.5)}to{box-shadow:0 0 40px rgba(56,189,248,1)}}
+.hero h1{font-size:3rem;margin-bottom:10px;background:linear-gradient(90deg,#38bdf8,#60a5fa,#06b6d4,#38bdf8);background-size:300%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:gradientMove 6s linear infinite}
+@keyframes gradientMove{from{background-position:0%}to{background-position:300%}}
+.hero h3{color:#38bdf8;margin-bottom:20px;min-height:40px}
+.cursor{animation:blink .8s infinite}
+@keyframes blink{50%{opacity:0}}
+.hero p{max-width:800px;margin:auto;color:#cbd5e1;line-height:1.8}
+.btn{display:inline-block;margin-top:25px;padding:12px 25px;background:#38bdf8;color:#000;text-decoration:none;border-radius:8px;font-weight:bold}
+.social{margin-top:20px}
+.social a{color:white;text-decoration:none;margin:0 10px}
+section{padding:80px 0}
+.section-title{text-align:center;font-size:2rem;margin-bottom:40px;color:#38bdf8}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.card{background:#1e293b;padding:25px;border-radius:15px;transition:.3s}
+.card:hover{transform:translateY(-8px);box-shadow:0 10px 25px rgba(56,189,248,.25)}
+.card h3{margin-bottom:10px;color:#38bdf8}
+.skills{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.skill{background:#1e293b;padding:10px 18px;border-radius:30px;transition:.3s}
+.skill:hover{background:#38bdf8;color:#000}
+.contact{text-align:center}
+.contact a{color:#38bdf8;text-decoration:none}
+footer{text-align:center;padding:20px;background:#020617;color:#94a3b8}
+@media(max-width:768px){.hero h1{font-size:2.2rem}.profile-pic{width:150px;height:150px}}
 </style>
 </head>
-
 <body>
-
 <header>
 <div class="hero">
-
 <img src="Ajay_photo1.jpg" alt="Ajay Singh" class="profile-pic">
-
 <h1>Ajay Singh</h1>
-
-<h3>Software Engineer | Full Stack Developer | Android Developer</h3>
-
-<p>
-Experienced Software Engineer with expertise in Java, Kotlin,
-Spring Boot, Angular, Android Development, Electron,
-Django, AWS, Microsoft Azure, and DigitalOcean.
-Passionate about building scalable web, desktop,
-and mobile applications.
-</p>
-
+<h3><span id="dynamic-text"></span><span class="cursor">|</span></h3>
+<p>Experienced Software Engineer with expertise in Java, Kotlin, Spring Boot, Angular, Android Development, Electron, Django, AWS, Microsoft Azure, and DigitalOcean.</p>
 <div class="social">
 <a href="mailto:asajay.cs@gmail.com">Email</a> |
-<a href="https://github.com/ajaysingh-2" target="_blank">GitHub</a> |
-<a href="https://www.linkedin.com/in/ajay-singh-989b69170/" target="_blank">LinkedIn</a>
+<a href="https://github.com/ajaysingh-2">GitHub</a> |
+<a href="https://www.linkedin.com/in/ajay-singh-989b69170/">LinkedIn</a>
 </div>
-
-<a href="#" class="btn">Download Resume</a>
-
+<a href="resume/Ajay_Singh_Resume.pdf" class="btn">Download Resume</a>
 </div>
 </header>
 
-<section id="about">
-<div class="container">
+<section id="about"><div class="container"><h2 class="section-title">About Me</h2><div class="card"><p>I am a Software Engineer with professional experience in developing enterprise applications using Angular, Spring Boot, Microservices, PostgreSQL, MySQL, and Cloud Platforms.</p></div></div></section>
 
-<h2 class="section-title">About Me</h2>
+<section id="experience"><div class="container"><h2 class="section-title">Experience</h2><div class="card"><h3>Software Engineer</h3><p><strong>Gmagica Technology Pvt Ltd, Delhi</strong><br>February 2023 – Current</p><ul><li>Developed Angular SPAs</li><li>Built REST APIs using Spring Boot</li><li>Worked with PostgreSQL and MySQL</li><li>Linux automation scripting</li><li>Cloud deployments</li></ul></div></div></section>
 
-<p style="text-align:center; max-width:900px; margin:auto;">
-I am a Software Engineer with professional experience in
-developing enterprise applications using Angular,
-Spring Boot, Microservices, PostgreSQL, MySQL,
-and Cloud Platforms. I enjoy creating Android apps,
-desktop applications, and scalable backend systems.
-</p>
+<section id="skills"><div class="container"><h2 class="section-title">Skills</h2><div class="skills"><div class="skill">Java</div><div class="skill">Kotlin</div><div class="skill">Spring Boot</div><div class="skill">Angular</div><div class="skill">Django</div><div class="skill">Electron</div><div class="skill">AWS</div><div class="skill">Azure</div><div class="skill">PostgreSQL</div><div class="skill">MySQL</div></div></div></section>
 
-</div>
-</section>
+<section id="projects"><div class="container"><h2 class="section-title">Projects</h2><div class="card-grid">
+<div class="card"><h3>Network Information System</h3><p>Inventory system for network resources.</p></div>
+<div class="card"><h3>Wedding Hall Booking System</h3><p>Full-stack booking platform.</p></div>
+<div class="card"><h3>Raspberry Pi Mini Computer</h3><p>Portable computing system.</p></div>
+<div class="card"><h3>ERP Management System</h3><p>Student and institution management platform.</p></div>
+<div class="card"><h3>Smile Detector App</h3><p>Android app with smile detection and voice feedback.</p></div>
+</div></div></section>
 
-<section id="experience">
-<div class="container">
+<section id="education"><div class="container"><h2 class="section-title">Education</h2><div class="card-grid"><div class="card"><h3>Bachelor of Information Technology</h3><p>Shri G.S. Institute of Technology and Science, Indore<br>Graduated with Honors</p></div><div class="card"><h3>GATE Qualified</h3><p>Strong Computer Science fundamentals.</p></div></div></div></section>
 
-<h2 class="section-title">Experience</h2>
+<section id="contact"><div class="container contact"><h2 class="section-title">Contact</h2><p>Email: asajay.cs@gmail.com</p><p>Whatsapp: +91 9407876415</p></div></section>
 
-<div class="card">
+<footer><p>© 2026 Ajay Singh | Software Engineer</p></footer>
 
-<h3>Software Engineer</h3>
-
-<p>
-<strong>Gmagica Technology Pvt Ltd, Delhi</strong><br>
-February 2023 – Current
-</p>
-
-<br>
-
-<ul>
-<li>Developed Angular Single Page Applications.</li>
-<li>Built REST APIs using Spring Boot & Microservices.</li>
-<li>Worked with PostgreSQL and MySQL databases.</li>
-<li>Implemented Linux Shell Scripts for automation.</li>
-<li>Managed deployments on cloud servers.</li>
-</ul>
-
-</div>
-
-</div>
-</section>
-
-<section id="skills">
-
-<div class="container">
-
-<h2 class="section-title">Skills</h2>
-
-<div class="skills">
-
-<div class="skill">Java</div>
-<div class="skill">Kotlin</div>
-<div class="skill">C</div>
-<div class="skill">C++</div>
-<div class="skill">Python</div>
-<div class="skill">JavaScript</div>
-<div class="skill">TypeScript</div>
-<div class="skill">Spring Boot</div>
-<div class="skill">Angular</div>
-<div class="skill">Django</div>
-<div class="skill">Electron</div>
-<div class="skill">Android SDK</div>
-<div class="skill">AWS</div>
-<div class="skill">Microsoft Azure</div>
-<div class="skill">DigitalOcean</div>
-<div class="skill">PostgreSQL</div>
-<div class="skill">MySQL</div>
-<div class="skill">Git</div>
-
-</div>
-
-</div>
-</section>
-
-<section id="projects">
-
-<div class="container">
-
-<h2 class="section-title">Projects</h2>
-
-<div class="card-grid">
-
-<div class="card">
-<h3>Network Information System</h3>
-<p>
-Inventory system for managing network resources such as routers,
-switches, cameras, WiFi devices and asset information.
-</p>
-</div>
-
-<div class="card">
-<h3>Wedding Hall Booking System</h3>
-<p>
-Full-stack booking platform developed using Spring Boot,
-HTML, CSS and JavaScript and deployed on DigitalOcean.
-</p>
-</div>
-
-<div class="card">
-<h3>Raspberry Pi Mini Computer</h3>
-<p>
-Portable computing system based on Raspberry Pi OS
-supporting multiple browsers and desktop applications.
-</p>
-</div>
-
-<div class="card">
-<h3>ERP Management System</h3>
-<p>
-Student and institution management platform with reports,
-fees tracking and administration features.
-</p>
-</div>
-
-</div>
-
-</div>
-</section>
-
-<section id="education">
-
-<div class="container">
-
-<h2 class="section-title">Education</h2>
-
-<div class="card-grid">
-
-<div class="card">
-<h3>Bachelor of Information Technology</h3>
-<p>
-Shri G.S. Institute of Technology and Science, Indore<br>
-Graduated with Honors
-</p>
-</div>
-
-<div class="card">
-<h3>Gate Qualified</h3>
-<p>
-    Qualified Graduate Aptitude Test in Engineering (GATE), demonstrating strong fundamentals in Computer Science and Engineering.
-<br>
-</p>
-</div>
-
-</div>
-
-</div>
-</section>
-
-<section id="contact">
-
-<div class="container contact">
-
-<h2 class="section-title">Contact</h2>
-
-<p>Email: asajay.cs@gmail.com</p>
-<p>Whatsapp: +91 9407876415</p>
-
-<p>
-GitHub:
-<a href="https://github.com/ajaysingh-2">
-github.com/ajaysingh-2
-</a>
-</p>
-
-<p>
-LinkedIn:
-<a href="https://www.linkedin.com/in/ajay-singh-software/">
-https://www.linkedin.com/in/ajay-singh-software/
-</a>
-</p>
-
-</div>
-
-</section>
-
-<footer>
-<p>© 2026 Ajay Singh | Software Engineer</p>
-</footer>
-
-</body>
-</html>
+<script>
+const roles=["Software Engineer","Full Stack Developer","Android Developer","Spring Boot Developer"];
+let roleIndex=0,charIndex=0,deleting=false;
+const dynamicText=document.getElementById("dynamic-text");
+function typeWriter(){
+const currentRole=roles[roleIndex];
+if(!deleting){dynamicText.textContent=currentRole.substring(0,charIndex+1);charIndex++;
+if(charIndex===currentRole.length){deleting=true;setTimeout(typeWriter,1500);return;}}
+else{dynamicText.textContent=currentRole.substring(0,charIndex-1);charIndex--;
+if(charIndex===0){deleting=false;roleIndex=(roleIndex+1)%roles.length;}}
+setTimeout(typeWriter,deleting?60:120)}
+typeWriter();
+</script>
+</body></html>
